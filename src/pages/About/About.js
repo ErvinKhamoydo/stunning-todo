@@ -1,15 +1,15 @@
 import authorImg from '../../img/ervin.jpg'
 import classes from './About.module.scss'
 
-export const About = () => (
+const About = () => (
    <div className={`jumbotron ${classes.About}`}>
       <div className="info row">
          <img src={authorImg} alt="Author" className="col-xl-3 rounded" />
          <div className="col-xl-9 info">
-            <h3>
+            <h2>
                Khamoido Ervin &nbsp; 
-               <span className="badge badge-primary">Author</span>
-            </h3>
+               <span className="badge badge-primary">Full-stack developer</span>
+            </h2>
             
             <ul className='list'>
                <li className="list-item">
@@ -62,3 +62,5 @@ export const About = () => (
       </div>
    </div>
 )
+
+export default About

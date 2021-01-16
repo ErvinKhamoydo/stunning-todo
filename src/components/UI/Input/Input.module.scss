@@ -1,0 +1,11 @@
+.Input {
+   & label {
+      font-weight: 600;
+   }
+   &.invalid input {
+      box-shadow: 0 0 5px rgba(230, 0, 0, 0.5);
+   }   
+   &.invalid small {
+      color: red;
+   }
+}
