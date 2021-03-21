@@ -15,8 +15,11 @@ const handlers = {
          isAuthenticated: false
       }
    },
-   DEFAULT: state => state
+   DEFAULT: state => {
+      console.log('STATE def', state);
+      return state}
 }
+
 
 export const authReducer = (state, action) => {
    const handler = handlers[action.type] || handlers.DEFAULT;

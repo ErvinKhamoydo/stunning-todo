@@ -5,7 +5,7 @@ import Auth from './pages/Auth';
 import TodoList from './pages/TodoLists/TodoLists';
 import Tasks from './pages/Tasks/Tasks';
 import { AuthState } from './redux/Auth/authState';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {

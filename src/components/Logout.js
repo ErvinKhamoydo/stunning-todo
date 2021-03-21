@@ -7,7 +7,7 @@ const Logout = (props) => {
 
    useEffect(() => { 
       console.log('logout magic');
-   }, [])
+   })
 
 
    return (

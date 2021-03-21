@@ -47,8 +47,7 @@ export const AuthState = ({children}) => {
    const authSuccess = (token) => {
       return {
          type: AUTH_SUCCESS,
-         token,
-         isAuthenticated: true
+         token
       }
    }
 
@@ -65,8 +64,7 @@ export const AuthState = ({children}) => {
       localStorage.removeItem('userId');
       localStorage.removeItem('expirationDate');
       return {
-         type: AUTH_LOGOUT,
-         isAuthenticated: false
+         type: AUTH_LOGOUT
       }
    }
 
@@ -82,7 +80,7 @@ export const AuthState = ({children}) => {
             if (expirationDate <= new Date()) {
                dispatch(logout())
             } else {
-               dispatch(authSuccess(token, true));
+               dispatch(authSuccess(token));
                dispatch(autoLogout((expirationDate.getTime() - new Date().getTime()) / 1000))
             }
          }
@@ -90,7 +88,7 @@ export const AuthState = ({children}) => {
    }
    const {isAuthenticated} = state;
 
-   console.log(isAuthenticated);
+   console.log('state', isAuthenticated);
    return (
       <AuthContext.Provider value={{
          auth,
